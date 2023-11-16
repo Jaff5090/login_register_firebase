@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
-    tools:context=".LoginFragment">
+    tools:context="com.example.ui.fragments.LoginFragment">
 
     <LinearLayout
         android:id="@+id/linearLogin"
@@ -102,32 +102,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="5dp"
-        android:layout_below="@+id/linearLogin"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_margin="5dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:contentDescription="google image"
-            android:src="@drawable/login_google" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-
-            android:contentDescription="google image"
-            android:src="@drawable/login_facebook" />
-
-
-
-    </LinearLayout>
 
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
-package com.example.login_register_firebase
+package com.example.ui.fragments
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,19 +9,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.login_register_firebase.databinding.FragmentLoginBinding
+import com.example.ui.activities.HomeActivity
+import com.example.login_register_firebase.R
 import com.example.login_register_firebase.databinding.FragmentRegisterBinding
-import com.example.viewmodels.LoginViewModel
-import com.example.viewmodels.RegisterViewModel
+import com.example.ui.viewmodels.LoginRegisterViewModel
+
 
 class RegisterFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: RegisterViewModel
+    private lateinit var viewModel: LoginRegisterViewModel
 
 
     override fun onCreateView(
@@ -36,7 +39,7 @@ class RegisterFragment : Fragment() {
         binding.connecterVous.setOnClickListener {
             findNavController().navigate(R.id.loginFragment)
         }
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(LoginRegisterViewModel::class.java)
 
         binding.ConnexionRegister.setOnClickListener {
             val email = binding.emailEditTextRegister.text.toString().trim()

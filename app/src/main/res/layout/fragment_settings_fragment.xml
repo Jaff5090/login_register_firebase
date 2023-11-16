@@ -1,0 +1,303 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ui.fragments.Settings_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:id="@+id/compte"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Compte"
+               android:textColor="@color/backgroundColor"
+               android:textStyle="bold"
+               android:textSize="20sp"/>
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginTop="10dp"
+               android:background="@color/secondary_reply_orange"/>
+
+           <LinearLayout
+               android:id="@+id/Linear_lougout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:padding="5dp">
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/baseline_person_24" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:gravity="center"
+                   android:text="Déconnexion"
+                   android:textSize="20dp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginEnd="10dp"
+               android:layout_marginBottom="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:padding="5dp">
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/baseline_person_24" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:gravity="center"
+                   android:text="Déconnexion"
+                   android:textSize="20dp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/securite"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/compte"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sécurité"
+               android:textColor="@color/backgroundColor"
+               android:textSize="20sp"
+               android:textStyle="bold" />
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginTop="10dp"
+               android:background="@color/secondary_reply_orange" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:layout_marginTop="20dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:padding="5dp">
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/baseline_person_24" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:gravity="center"
+                   android:text="Déconnexion"
+                   android:textSize="20dp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/support"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/securite"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Support"
+               android:textColor="@color/backgroundColor"
+               android:textSize="20sp"
+               android:textStyle="bold" />
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginTop="10dp"
+               android:background="@color/secondary_reply_orange" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:layout_marginTop="20dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:padding="5dp">
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/baseline_person_24" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:gravity="center"
+                   android:text="Déconnexion"
+                   android:textSize="20dp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/divers"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/support"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Divers"
+               android:textColor="@color/backgroundColor"
+               android:textSize="20sp"
+               android:textStyle="bold" />
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginTop="10dp"
+               android:background="@color/secondary_reply_orange" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:layout_marginTop="20dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:padding="5dp">
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/baseline_person_24" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:gravity="center"
+                   android:text="Déconnexion"
+                   android:textSize="20dp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/CGU"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/divers"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="CGU"
+               android:textColor="@color/backgroundColor"
+               android:textSize="20sp"
+               android:textStyle="bold" />
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginTop="10dp"
+               android:background="@color/secondary_reply_orange" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:layout_marginTop="20dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:padding="5dp">
+
+               <ImageView
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/baseline_person_24" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:gravity="center"
+                   android:text="Déconnexion"
+                   android:textSize="20dp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+
+       </LinearLayout>
+   </RelativeLayout>
+
+
+
+
+</FrameLayout>

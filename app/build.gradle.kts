@@ -66,9 +66,13 @@ dependencies {
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-
-
+    //splashscree
     implementation("androidx.core:core-splashscreen:1.0.0")
+    //auth google
+    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+
 
 
 }

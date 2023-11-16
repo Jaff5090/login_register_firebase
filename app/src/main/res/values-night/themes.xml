@@ -3,14 +3,24 @@
     <style name="Base.Theme.Login_register_Firebase" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-        <item name="colorPrimary">@color/my_light_primary</item>
-        <item name="colorPrimaryVariant">@color/my_light_primary_variant</item>
-        <item name="colorOnPrimary">@color/my_light_on_primary</item>
+        <item name="colorPrimary">@color/primary_replay_blue_800</item>
+        <item name="colorPrimaryVariant">@color/primary_replay_blue_700</item>
+        <item name="colorOnPrimary">@color/primary_replay_blue_600</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+
+    </style>
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/primary_replay_blue_800</item>
+        <item name="colorOnPrimary">@color/secondary_reply_orange</item>
     </style>
 
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/amelec</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.Login_register_Firebase</item>
     </style>
 </resources>

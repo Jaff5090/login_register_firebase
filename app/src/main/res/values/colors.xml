@@ -6,4 +6,11 @@
     <color name="my_light_primary">#192BC2</color>
     <color name="my_light_primary_variant">#449DD1</color>
     <color name="my_light_on_primary">#78C0E0</color>
+
+    <color name="primary_replay_blue_700">#344955</color>
+    <color name="primary_replay_blue_800">#232F34</color>
+    <color name="primary_replay_blue_600">#4A6572</color>
+    <color name="secondary_reply_orange">#F9AA33</color>
+
+
 </resources>

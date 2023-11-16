@@ -1,8 +1,9 @@
-package com.example.login_register_firebase
+package com.example.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.viewmodels.SplashScreenViewModel
+import com.example.login_register_firebase.R
+import com.example.ui.viewmodels.SplashScreenViewModel
 
 class MainActivity : AppCompatActivity() {
 

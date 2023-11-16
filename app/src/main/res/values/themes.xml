@@ -10,7 +10,7 @@
 
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/amelec</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.Login_register_Firebase</item>
     </style>
 
