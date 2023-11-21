@@ -28,19 +28,6 @@ class HomeActivity : AppCompatActivity() {
 
         replaceFragment(Home_fragment())
 
-      /*  viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-
-        binding.logout.setOnClickListener {
-            viewModel.signOut()
-        }
-
-        viewModel.signOutResult.observe(this, Observer { isSignedOut ->
-            if (isSignedOut) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        })*/
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {

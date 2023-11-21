@@ -20,7 +20,6 @@ class Settings_fragment : Fragment() {
 
     private var _binding:FragmentSettingsFragmentBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var viewModel: SettingsViewModel
 
 
@@ -51,7 +50,4 @@ class Settings_fragment : Fragment() {
 
     }
 
-    companion object {
-
-    }
 }

@@ -49,6 +49,8 @@ android {
 
 dependencies {
     implementation("com.google.firebase:firebase-auth:22.2.0")
+    implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
+
     val nav_version = "2.5.3"
 
     implementation("androidx.core:core-ktx:1.9.0")
@@ -71,6 +73,10 @@ dependencies {
     //auth google
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.firebase:firebase-firestore")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
 
 
 

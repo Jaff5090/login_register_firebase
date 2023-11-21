@@ -1,0 +1,94 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+
+            android:id="@+id/Linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- TextView pour le Nom du Client -->
+            <TextView
+                android:id="@+id/tvNomDuClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Nom du Client"
+                android:textColor="@color/secondary_reply_orange"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- TextView pour le Code du Client -->
+            <TextView
+                android:id="@+id/codeClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Code du Client"
+                android:textSize="16sp" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_entretien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Linear1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- TextView pour le Téléphone -->
+            <TextView
+                android:id="@+id/Telephone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tél: 123-456-7890"
+                android:textSize="10sp" />
+
+            <!-- TextView pour le Fax -->
+            <TextView
+                android:id="@+id/Fax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fax: 098-765-4321"
+                android:textSize="10sp" />
+
+            <!-- TextView pour l'Email -->
+            <TextView
+                android:id="@+id/emailClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="client@email.com"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

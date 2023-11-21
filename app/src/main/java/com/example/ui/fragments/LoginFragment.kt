@@ -77,8 +77,6 @@ class LoginFragment : Fragment() {
         activity?.let {
             googleSignInClient = GoogleSignIn.getClient(it, gso)
         }
-
-
         binding.signGoogle.setOnClickListener {
             signInGoogle()
         }
@@ -120,9 +118,6 @@ class LoginFragment : Fragment() {
             }
         }
     }
-
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

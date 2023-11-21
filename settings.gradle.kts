@@ -18,4 +18,3 @@ dependencyResolutionManagement {
 rootProject.name =
     "Login_register_Firebase"
 include(":app")
- 

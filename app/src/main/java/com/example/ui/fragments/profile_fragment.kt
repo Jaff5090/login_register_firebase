@@ -1,60 +1,67 @@
 package com.example.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.login_register_firebase.R
+import android.widget.Toast
+import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.login_register_firebase.databinding.FragmentAddClientBinding
+import com.example.models.Client
+import com.example.ui.viewmodels.ClientViewModel
+import java.util.UUID
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [profile_fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class profile_fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class profile_fragment : DialogFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+        private var _binding: FragmentAddClientBinding? = null
+        private val binding get() = _binding!!
+        private lateinit var clientViewModel: ClientViewModel
+
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            _binding = FragmentAddClientBinding.inflate(inflater, container, false)
+            return binding.root
+        }
+
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+            super.onViewCreated(view, savedInstanceState)
+
+            clientViewModel = ViewModelProvider(this).get(ClientViewModel::class.java)
+            binding.addClientButtom.setOnClickListener {
+                addClient()
+            }
+        }
+
+        private fun addClient() {
+            val uniqueID = UUID.randomUUID().toString()
+
+            val client = Client(
+                id = uniqueID,
+                nomDuClient = binding.NomduClient.text.toString(),
+                codeClient = binding.CodeClient.text.toString(),
+                email = binding.emailClient.text.toString(),
+                numTelephone = binding.phoneClient.text.toString(),
+                fax = binding.FaxClient.text.toString()
+            )
+
+            clientViewModel.addClient(client,
+                onSuccess = {
+                    Toast.makeText(context, "Client ajouté avec succès", Toast.LENGTH_SHORT).show()
+                },
+                onFailure = { e ->
+                    Toast.makeText(context, "Erreur: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            )
+        }
+        override fun onStart() {
+            super.onStart()
+            dialog?.window?.apply {
+                setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                setBackgroundDrawable(null)  // Pour un arrière-plan transparent ou autre, si nécessaire
+            }
         }
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_fragment, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment profile_fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            profile_fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-}

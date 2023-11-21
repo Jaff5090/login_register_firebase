@@ -24,7 +24,6 @@ class LoginRegisterViewModel : ViewModel() {
             _loginResult.value = false
         }
     }
-
     fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         FirebaseAuth.getInstance().signInWithCredential(credential)
@@ -32,9 +31,6 @@ class LoginRegisterViewModel : ViewModel() {
                 _loginResult.value = task.isSuccessful
             }
     }
-
-
-
     fun register(email: String?, password: String?, confirmPass: String?) {
         if (email.isNullOrEmpty() || password.isNullOrEmpty()) {
             return

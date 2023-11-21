@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,20 +21,25 @@
         android:theme="@style/Theme.Login_register_Firebase"
         tools:targetApi="31">
         <activity
-            android:name="com.example.ui.activities.MainActivity"
+            android:name="com.example.ui.fragments.FragmentCheckEntretien"
             android:exported="false" />
         <activity
-            android:name="com.example.ui.activities.HomeActivity"/>
+            android:name="com.example.ui.fragments.FragmentAddClient"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ui.activities.MainActivity"
+            android:exported="false" />
+        <activity android:name="com.example.ui.activities.HomeActivity" />
         <activity
             android:name="com.example.ui.activities.SplashScreen"
-            android:theme="@style/Theme.App.SplashScreen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.App.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
