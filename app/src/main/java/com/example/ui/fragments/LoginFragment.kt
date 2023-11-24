@@ -1,6 +1,7 @@
 package com.example.ui.fragments
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -64,9 +65,15 @@ class LoginFragment : Fragment() {
                 activity?.finish()
             } else {
                 Log.d("LoginFragment", "Échec de la connexion")
-                Toast.makeText(activity, "Échec de la connexion", Toast.LENGTH_SHORT).show()
+                // Afficher un popup d'échec
+                AlertDialog.Builder(activity)
+                    .setTitle("Échec")
+                    .setMessage("Échec de la connexion. Vérifiez vos données de connexion.")
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show()
             }
         })
+
         auth = FirebaseAuth.getInstance()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

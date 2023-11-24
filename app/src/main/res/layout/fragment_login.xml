@@ -3,108 +3,126 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
     android:background="@color/backgroundColor"
     tools:context="com.example.ui.fragments.LoginFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:orientation="vertical">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical">
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/circleLogo"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_centerHorizontal="true"
+          android:layout_gravity="center"
+          android:src="@drawable/amelec" />
+      <LinearLayout
+          android:layout_below="@id/circleLogo"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="se connecter"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="email">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="mot de passe "
-            app:endIconMode="password_toggle">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:textColor="@android:color/black" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/ConnexionLogin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:text="connexion"
-            android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/createAccount"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="15dp"
-            android:text="créer un compte"
-            android:textAlignment="textEnd"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLogin"
-        android:layout_centerInParent="true"
-        android:layout_margin="5dp"
-        android:orientation="vertical">
+          android:id="@+id/linearLogin"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginBottom="15dp"
+          android:orientation="vertical">
 
 
 
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginEnd="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="Connexion"
+              android:textColor="@color/black"
+              android:textSize="20dp"
+              android:textStyle="bold" />
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="10dp"
+              android:hint="email">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:id="@+id/emailEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/black" />
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="10dp"
+              android:hint="mot de passe "
+              app:endIconMode="password_toggle">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:id="@+id/passwordEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPassword"
+                  android:textColor="@android:color/black" />
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <Button
+              android:id="@+id/ConnexionLogin"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="10dp"
+              android:text="connexion"
+              android:textColor="@color/white" />
+
+          <TextView
+              android:id="@+id/createAccount"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="15dp"
+              android:text="créer un compte"
+              android:textAlignment="textEnd"
+              android:textColor="@color/black"
+              android:textSize="15dp"
+              android:textStyle="bold" />
 
 
-        <ImageView
-            android:id="@+id/signGoogle"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:contentDescription="google image"
-            android:src="@drawable/login_google" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/linearLogin"
+          android:layout_centerInParent="true"
+          android:layout_margin="5dp"
+          android:orientation="vertical">
 
 
-    </LinearLayout>
+
+
+
+          <ImageView
+              android:id="@+id/signGoogle"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_margin="5dp"
+              android:contentDescription="google image"
+              android:src="@drawable/login_google" />
+
+
+      </LinearLayout>
+  </LinearLayout>
 
 
 </RelativeLayout>

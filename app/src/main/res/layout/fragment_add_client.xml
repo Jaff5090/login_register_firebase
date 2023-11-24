@@ -10,15 +10,7 @@
     android:layout_gravity="center"
     android:layout_centerVertical="true"
     tools:context="com.example.ui.fragments.profile_fragment">
-    <TextView
-        android:id="@+id/textViewObservations"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="21dp"
-        android:text="Ajouter un client:"
-        android:textColor="@color/my_light_primary"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
