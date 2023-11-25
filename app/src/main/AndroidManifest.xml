@@ -22,12 +22,8 @@
         <activity
             android:name="com.example.modules.ModulePage"
             android:exported="false" />
-        <activity
-            android:name="com.example.ui.fragments.FragmentCheckEntretien"
-            android:exported="false" />
-        <activity
-            android:name="com.example.ui.fragments.FragmentAddClient"
-            android:exported="false" />
+
+
         <activity
             android:name="com.example.ui.activities.MainActivity"
             android:exported="false" />

@@ -33,7 +33,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         _binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //replaceFragment(Home_fragment())
+        replaceFragment(Home_fragment())
 
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
