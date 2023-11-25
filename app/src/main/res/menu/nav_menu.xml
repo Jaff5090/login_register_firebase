@@ -7,27 +7,27 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/login_facebook"
-            android:title="Home"/>
+            android:icon="@drawable/login_google"
+            android:title="@string/home"/>
         <item
             android:id="@+id/nav_settings"
-            android:icon="@drawable/login_facebook"
-            android:title="Settings"/>
+            android:icon="@drawable/login_google"
+            android:title="@string/settings"/>
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/login_facebook"
-            android:title="Share"/>
+            android:icon="@drawable/login_google"
+            android:title="@string/share"/>
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/login_facebook"
-            android:title="About Us"/>
+            android:icon="@drawable/login_google"
+            android:title="@string/about_us"/>
     </group>
     <item
         android:title="">
         <menu>
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/login_facebook"
+                android:icon="@drawable/login_google"
                 android:title="Logout"/>
         </menu>
     </item>
