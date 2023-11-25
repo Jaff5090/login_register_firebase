@@ -21,7 +21,6 @@ local.properties
 captures/
 navigation/
 build/
-app/src/main/res/values/strings.xml
 proguard-rules.pro
 /output
 *.c
