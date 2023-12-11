@@ -11,5 +11,6 @@
     <string name="settings">Settings</string>
     <string name="share">Share</string>
     <string name="about_us">About Us</string>
+    <string name="nom">Nom</string>
 
 </resources>

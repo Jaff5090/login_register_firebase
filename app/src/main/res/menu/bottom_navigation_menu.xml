@@ -3,7 +3,7 @@
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:icon="@drawable/baseline_home_24"
+        android:icon="@drawable/baseline_groups_24"
         android:title="Clients"/>
     <item
         android:id="@+id/page_2"

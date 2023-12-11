@@ -1,34 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn = "navigation_view">
-    <group
-        android:checkableBehavior="single">
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/login_google"
-            android:title="@string/home"/>
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/baseline_dashboard_24"
+            android:title="Tableau de Bord"/>
+
+
         <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/login_google"
-            android:title="@string/settings"/>
+            android:id="@+id/nav_services"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Services">
+            <menu>
+                <!-- Sous-menu pour l'entretien -->
+                <item
+                    android:id="@+id/nav_maintenance_schedule"
+                    android:icon="@drawable/baseline_home_24"
+                    android:title="Planification d'Entretien"/>
+
+                <!-- Sous-menu pour le dépannage -->
+                <item
+                    android:id="@+id/nav_troubleshoot_report"
+                    android:icon="@drawable/baseline_home_24"
+                    android:title="Signaler un Dépannage"/>
+
+                <!-- Sous-menu pour les réparations -->
+                <item
+                    android:id="@+id/nav_repair_faq"
+                    android:icon="@drawable/baseline_build_24"
+                    android:title="FAQ Réparations"/>
+            </menu>
+        </item>
         <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/login_google"
-            android:title="@string/share"/>
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/baseline_circle_notifications_24"
+            android:title="Notifications"/>
+
         <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/login_google"
-            android:title="@string/about_us"/>
+            android:id="@+id/nav_new_features"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Nouveautés"/>
+
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Support Client"/>
+
+        <item
+            android:id="@+id/nav_training"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Formations"/>
     </group>
-    <item
-        android:title="">
+
+    <item android:title="Compte">
         <menu>
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/login_google"
-                android:title="Logout"/>
+                android:icon="@drawable/baseline_home_24"
+                android:title="Se Déconnecter"/>
         </menu>
     </item>
+
 </menu>

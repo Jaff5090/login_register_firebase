@@ -60,7 +60,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Home_fragment()).commit()
-            navigationView.setCheckedItem(R.id.nav_home)
+            navigationView.setCheckedItem(R.id.nav_dashboard)
         }
 
 
@@ -69,20 +69,43 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-/*
-            R.id.nav_home -> supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFragment()).commit()
-*/
-            R.id.nav_settings -> supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
-        /*    R.id.nav_share -> supportFragmentManager.beginTransaction().replace(R.id.fragment_container, ShareFragment()).commit()
-            R.id.nav_about -> supportFragmentManager.beginTransaction().replace(R.id.fragment_container, AboutFragment()).commit()
-            R.id.nav_logout -> Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show()*/
+            R.id.nav_dashboard -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_maintenance_schedule -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_troubleshoot_report -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_repair_faq -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_notifications -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_new_features -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_support -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_training -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Settings_fragment()).commit()
+            }
+            R.id.nav_logout -> {
+                Toast.makeText(this, "Déconnexion!", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
 
-     private fun replaceFragment(fragment:Fragment){
+
+
+    private fun replaceFragment(fragment:Fragment){
          val fragmentManager = supportFragmentManager
          val fragmentTransaction = fragmentManager.beginTransaction()
          fragmentTransaction.replace(R.id.fragment_container,fragment)
